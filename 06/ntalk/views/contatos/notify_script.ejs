@@ -1,0 +1,12 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+const socket = io();
+socket.on('new-message', (data) => {
+    const chat = document.getElementById(`chat_${data.email}`);
+    if (chat.href.includes('?sala=')) {
+        chat.href = chat.href.replace(/\?sala=[\w]+/, `?sala=${data.sala}`);
+    } else {
+        chat.href += `?sala=${data.sala}`;
+    }
+});
+</script>
