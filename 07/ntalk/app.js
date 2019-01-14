@@ -19,7 +19,7 @@ global.db = mongoose
     'mongodb://localhost:27017/ntalk',
     { useNewUrlParser: true }
   )
-  .then(r => console.log('connectou'));
+  .then(r => console.log('mongo connectado'));
 
 const app = express();
 const server = http.Server(app);
