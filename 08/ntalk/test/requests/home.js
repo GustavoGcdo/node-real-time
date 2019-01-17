@@ -1,5 +1,4 @@
 const app = require('../../app');
-const should = require('should');
 const request = require('supertest')(app);
 
 describe('No controller home', () => {
